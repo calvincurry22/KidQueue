@@ -30,7 +30,7 @@ CREATE TABLE [User] (
 GO
 
 CREATE TABLE [Daycare] (
-  [Id] int PRIMARY KEY NOT NULL,
+  [Id] int IDENTITY(1,1) PRIMARY KEY NOT NULL,
   [Name] varchar(100) NOT NULL,
   [Address] varchar(300) NOT NULL,
   [City] varchar(50) NOT NULL,
@@ -41,13 +41,13 @@ CREATE TABLE [Daycare] (
 GO
 
 CREATE TABLE [UserType] (
-  [Id] int PRIMARY KEY NOT NULL,
+  [Id] int IDENTITY(1,1) PRIMARY KEY NOT NULL,
   [Name] varchar(10) NOT NULL
 )
 GO
 
 CREATE TABLE [Child] (
-  [Id] int PRIMARY KEY NOT NULL,
+  [Id] int IDENTITY(1,1) PRIMARY KEY NOT NULL,
   [FirstName] varchar(30) NOT NULL,
   [LastName] varchar(30) NOT NULL,
   [Birthdate] datetime,
@@ -58,7 +58,7 @@ CREATE TABLE [Child] (
 GO
 
 CREATE TABLE [Parent] (
-  [Id] int PRIMARY KEY NOT NULL,
+  [Id] int IDENTITY(1,1) PRIMARY KEY NOT NULL,
   [FirstName] varchar(30) NOT NULL,
   [LastName] varchar(30) NOT NULL,
   [ChildId] int NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE [Parent] (
 GO
 
 CREATE TABLE [WaitList] (
-  [Id] int PRIMARY KEY NOT NULL,
+  [Id] int IDENTITY(1,1) PRIMARY KEY NOT NULL,
   [Name] varchar(30) NOT NULL,
   [DaycareId] int NOT NULL
 )
